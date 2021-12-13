@@ -1,18 +1,18 @@
 var mongoose = require('mongoose');
 
 var productSchema = mongoose.Schema({
-    userName: {
+    name: {
         type: String,
         default: 'No Name'
     },
-    password: {
+    type: {
         type: String,
-        default: '0'
+        default: 'Hoạt động'
     },
-    address: {
+    details: {
         type: String,
         default: 'No Details'
     }
 });
 
-module.exports = mongoose.model('user', productSchema, 'user');
+module.exports = mongoose.model('csvc', productSchema, 'csvc');

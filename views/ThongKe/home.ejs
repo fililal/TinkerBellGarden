@@ -35,8 +35,8 @@
                     <tr>
                         <!-- <th>Product id</th> -->
                         <th>Tên trò chơi</th>
-                        <th>Giá vé</th>
-                        <th>Mô tả</th>
+                        <th>Theo ngày</th>
+                        <th>Theo tháng</th>
                     </tr>
                 </thead>
                 <% products.forEach((entry)=> { %>
@@ -48,26 +48,14 @@
                             <%= entry.name %>
                         </td>
                         <td>
-                            <%= entry.type %>
+                            <%= entry.day %>
                         </td>
                         <td>
-                            <%=entry.details %>
-                        </td>
-                        <td>
-                            <input class="btn btn-primary" type="button" value="Update"
-                                onclick="handleUpdateProduct('<%= entry.id %>')">
+                            <%=entry.month %>
                         </td>
                     </tr>
                     <% }) %>
             </table>
-            <script>
-                function handleUpdateProduct(value) {
-                    console.log(value);
-                    $(location).attr('href', '/GameInformation/update-product/' + value);
-                }
-            </script>
-
-
 </body>
 
 </html>

@@ -25,9 +25,10 @@
             </div>
             <div class="form-group">
                 <label>Mô tả</label>
-                <input class="form-control" type="text" name='productDetails' value="<%= product.details %>" maxlength="150">
+                <input class="form-control" type="text" name='productDetails' value="<%= product.details %>" maxlength="150" required>
             </div>
             <input id="update-btn" class="btn btn-primary" type="submit" value="SAVE">
+            <button><a href="/GameInformation">Cancel</a></button>
         </form>
     </div>
 </body>

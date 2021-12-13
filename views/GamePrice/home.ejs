@@ -25,7 +25,8 @@
         </div>
         <div id="main-content">
             <div class="main-content-top">
-                <h3>Thông tin trò chơi</h3>
+                <h3>Quản lý trò chơi</h3>
+                <button><a href="/add-product">Thêm trò chơi</a></button>
                 <button>
                     Đăng xuất
                 </button>
@@ -33,26 +34,26 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <!-- <th>Product id</th> -->
+                        <th>Product id</th>
                         <th>Tên trò chơi</th>
                         <th>Giá vé</th>
-                        <th>Mô tả</th>
+                        <!-- <th>Mô tả</th> -->
                     </tr>
                 </thead>
                 <% products.forEach((entry)=> { %>
                     <tr ondblclick="handleUpdateProduct('<%= entry.id %>')">
-                        <!-- <td>
+                        <td>
                             <%= entry.id %>
-                        </td> -->
+                        </td>
                         <td>
                             <%= entry.name %>
                         </td>
                         <td>
                             <%= entry.type %>
                         </td>
-                        <td>
+                        <!-- <td>
                             <%=entry.details %>
-                        </td>
+                        </td> -->
                         <td>
                             <input class="btn btn-primary" type="button" value="Update"
                                 onclick="handleUpdateProduct('<%= entry.id %>')">
@@ -63,9 +64,12 @@
             <script>
                 function handleUpdateProduct(value) {
                     console.log(value);
-                    $(location).attr('href', '/GameInformation/update-product/' + value);
+                    $(location).attr('href', '/GamePrice/update-product/' + value);
                 }
             </script>
+            
+        </div>
+
 
 
 </body>

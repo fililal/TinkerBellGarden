@@ -12,6 +12,12 @@ var productSchema = mongoose.Schema({
     details: {
         type: String,
         default: 'No Details'
+    },
+    day: {
+        type: Number
+    },
+    month: {
+        type: Number
     }
 });
 

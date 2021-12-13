@@ -25,7 +25,8 @@
         </div>
         <div id="main-content">
             <div class="main-content-top">
-                <h3>Thông tin trò chơi</h3>
+                <h3>Cơ sở vật chất</h3>
+                <button><a href="/csvc/add-product">Thêm</a></button>
                 <button>
                     Đăng xuất
                 </button>
@@ -34,9 +35,9 @@
                 <thead>
                     <tr>
                         <!-- <th>Product id</th> -->
-                        <th>Tên trò chơi</th>
-                        <th>Giá vé</th>
-                        <th>Mô tả</th>
+                        <th>Tên</th>
+                        <th>Tình trạng</th>
+                        <th>Ghi chú</th>
                     </tr>
                 </thead>
                 <% products.forEach((entry)=> { %>
@@ -63,7 +64,7 @@
             <script>
                 function handleUpdateProduct(value) {
                     console.log(value);
-                    $(location).attr('href', '/GameInformation/update-product/' + value);
+                    $(location).attr('href', '/csvc/update-product/' + value);
                 }
             </script>
 
